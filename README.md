@@ -2,16 +2,21 @@
 <H3>REGISTER NO:212223230168</H3>
 <H3>DATE:08-08-26</H3>
 <H1 Align="center">Project Based Experiment<H1>
+    
 <H3>Objective:<H3>
 To analyze the sentiment of Facebook comments using Natural Language Processing (NLP) and TextBlob, classify them as Positive, Negative, or Neutral, count the occurrences of a specific name, and visualize the sentiment distribution.
 <H3>Program:</H3>
+```
 Step 1: Import Libraries
+```
 ```
 import pandas as pd
 from textblob import TextBlob
 import matplotlib.pyplot as plt
 ```
+```
 Step 2:Load Facebook Data
+```
 ```
 data = pd.read_excel("FacebookPosts.xlsx")
 
