@@ -7,12 +7,12 @@
 To analyze the sentiment of Facebook comments using Natural Language Processing (NLP) and TextBlob, classify them as Positive, Negative, or Neutral, count the occurrences of a specific name, and visualize the sentiment distribution.
     
 <H3>Program:</H3>
-```
 Step 1: Import Libraries
-
+```
 import pandas as pd
 from textblob import TextBlob
 import matplotlib.pyplot as plt
+```
 
 Step 2:Load Facebook Data
 
