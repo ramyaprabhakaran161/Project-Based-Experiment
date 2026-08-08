@@ -63,7 +63,11 @@ plt.ylabel("Number of Comments")
 plt.show()
 ```
 <H3>Output:</H3>
+```
 <img width="882" height="585" alt="image" src="https://github.com/user-attachments/assets/d96a75ef-9992-4861-9349-b6d88a905b0f" />
+```
 
 <H3>Inference:</H3>
+```
 The experiment successfully analyzed Facebook comments using TextBlob and classified them into Positive, Negative, and Neutral sentiments. The sentiment counts and graph help understand the overall emotional response of users. The occurrence count also helps identify how frequently a particular name appears in the extracted Facebook data.
+```
