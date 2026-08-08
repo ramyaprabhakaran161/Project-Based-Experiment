@@ -5,26 +5,24 @@
     
 <H3>Objective:<H3>
 To analyze the sentiment of Facebook comments using Natural Language Processing (NLP) and TextBlob, classify them as Positive, Negative, or Neutral, count the occurrences of a specific name, and visualize the sentiment distribution.
+    
 <H3>Program:</H3>
 ```
 Step 1: Import Libraries
-```
-```
+
 import pandas as pd
 from textblob import TextBlob
 import matplotlib.pyplot as plt
-```
-```
+
 Step 2:Load Facebook Data
-```
-```
+
 data = pd.read_excel("FacebookPosts.xlsx")
 
 print(data.head())
 print(data.columns)
-```
+
 Step 3: Create Sentiment Function
-```
+
 def get_sentiment(text):
     analysis = TextBlob(str(text))
     
@@ -34,30 +32,30 @@ def get_sentiment(text):
         return "Negative"
     else:
         return "Neutral"
-```
+
 Step 4: Perform Sentiment Analysis
-```
+
 data['Sentiment'] = data['Timeline'].apply(get_sentiment)
 
 print(data)
-```
+
 Step 5: Count Sentiments
-```
+
 sentiment_counts = data['Sentiment'].value_counts()
 
 print(sentiment_counts)
-```
+
 This shows the number of positive, negative, and neutral comments.
 Step 6: Count Occurrences of Your Name
-```
+
 name = "Ramya"
 
 count = data['Timeline'].str.lower().str.count(name.lower()).sum()
 
 print("Number of occurrences of", name, ":", count)
-```
+
 Step 7: Visualize Sentiment
-```
+
 plt.bar(sentiment_counts.index, sentiment_counts.values)
 plt.title("Facebook Comments Sentiment Distribution")
 plt.xlabel("Sentiment")
